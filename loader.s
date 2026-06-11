@@ -12,7 +12,7 @@
 .global loader
 
 loader:
-    mov %kernel_stack, %esp
+    mov $kernel_stack, %esp
     push %eax
     push %ebx
     call kernelMain
@@ -25,4 +25,4 @@ _stop:
 
 .section .bss
 .space 2*1024*1024; # 2 MiB
-kernel_stack
+kernel_stack:
