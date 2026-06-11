@@ -10,7 +10,7 @@ objects = loader.o kernel.o
 %.o: %.s
 		as ${ASPARAMS} -o $@ $<
 
-mykernel.bin: linked.ld ${objects}
+mykernel.bin: linker.ld ${objects}
 		ld $(LDPARAMS) -T $< -o $@ $(objects)
 
 install: mykernel.bin
