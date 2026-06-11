@@ -20,7 +20,7 @@ loader:
 _stop:
     cli
     hlt
-    jmp_stop
+    jmp _stop
 
 
 .section .bss
